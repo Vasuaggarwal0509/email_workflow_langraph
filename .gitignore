@@ -1,0 +1,44 @@
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environment
+venv/
+.venv/
+
+# Environment variables
+.env
+
+# Gmail OAuth files
+credentials.json
+token.json
+tokens/
+tokens/*
+
+# LangGraph / Chroma DB persistence
+db/
+chroma/
+
+# VSCode / JetBrains / IDE configs
+.vscode/
+.idea/
+*.iml
+
+# Logs
+*.log
+
+# macOS / Windows junk files
+.DS_Store
+Thumbs.db
+
+# FastAPI build artifacts
+*.db
+*.sqlite
+*.sqlite3
+
+# Node modules if frontend exists
+node_modules/
+dist/
+build/

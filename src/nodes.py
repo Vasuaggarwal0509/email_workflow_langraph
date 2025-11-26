@@ -28,20 +28,6 @@ class Nodes:
     def is_email_inbox_empty(self, state: GraphState) -> GraphState:
         return state
 
-    # def categorize_email(self, state: GraphState) -> GraphState:
-    #     """Categorizes the current email using the categorize_email agent."""
-    #     print(Fore.YELLOW + "Checking email category...\n" + Style.RESET_ALL)
-        
-    #     # Get the last email
-    #     current_email = state["emails"][-1]
-    #     result = self.agents.categorize_email.invoke({"email": current_email.body})
-    #     print(Fore.MAGENTA + f"Email category: {result.category.value}" + Style.RESET_ALL)
-        
-    #     return {
-    #         "email_category": result.category.value,
-    #         "current_email": current_email
-    #     }
-
     def categorize_email(self, state: GraphState) -> GraphState:
         print(Fore.YELLOW + "Checking email category...\n" + Style.RESET_ALL)
         
@@ -172,12 +158,6 @@ class Nodes:
         self.gmail_tools.send_reply(state["current_email"], state["generated_email"])
         
         return {"retrieved_documents": "", "trials": 0}
-    
-    # def skip_unrelated_email(self, state):
-    #     """Skip unrelated email and remove from emails list."""
-    #     print("Skipping unrelated email...\n")
-    #     state["emails"].pop()
-    #     return state
     
     def skip_unrelated_email(self, state):
         print(Fore.RED + "Skipping unrelated email..." + Style.RESET_ALL)
